@@ -11,3 +11,7 @@ def hello_world():
     Default Route
     '''
     return 'Hello, World!'
+
+
+if __name__ == "__main__":
+    APP.run()
