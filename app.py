@@ -1,17 +1,11 @@
-'''Main Function'''
 from flask import Flask
 
+app = Flask(__name__)
+app.debug = True
 
-APP = Flask(__name__)
+@app.route('/')
+def main():
+    return 'hi'
 
-
-@APP.route('/')
-def hello_world():
-    '''
-    Default Route
-    '''
-    return 'Hello, World!'
-
-
-if __name__ == "__main__":
-    APP.run()
+if __name__ == '__main__':
+    app.run(host='0.0.0.0')

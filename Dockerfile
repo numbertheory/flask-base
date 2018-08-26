@@ -4,6 +4,8 @@ ENV LC_ALL=C.UTF-8
 ENV LANG=C.UTF-8
 ENV FLASK_APP=app.py
 
+EXPOSE 5000
+
 RUN apt-get update && apt-get install -y \
     software-properties-common
 
@@ -18,4 +20,4 @@ RUN pip3 install flask
 
 COPY ./ .
 
-ENTRYPOINT ["flask", "run"]
+ENTRYPOINT ["python3", "app.py"]
